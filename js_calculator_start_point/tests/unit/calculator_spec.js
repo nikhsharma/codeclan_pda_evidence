@@ -36,4 +36,13 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 4);
   })
 
+  it('should be able to click on an operator', function() {
+    calculator.numberClick(2);
+    calculator.operatorClick('+')
+    calculator.numberClick(2);
+    assert.strictEqual(calculator.runningTotal, 2);
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 4);
+  })
+
 });
