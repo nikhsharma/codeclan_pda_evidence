@@ -83,4 +83,13 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('10')
   })
 
+  it('should diplay an error when dividing by 0', function() {
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('Error')
+  })
+
 });

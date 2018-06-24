@@ -66,9 +66,12 @@ Calculator.prototype = {
     } else {
       this.previousOperator = operator;
     }
+    // if dividing by 0, display an error
+    if (this.runningTotal === Infinity) {
+      this.runningTotal = 'Error'
+    }
     // replace the previous total with the current running total and flag that a
     // new total has been calculated
-
     this.previousTotal = this.runningTotal;
     this.newTotal = true;
   },
