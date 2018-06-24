@@ -45,4 +45,11 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 4);
   })
 
+  it('should be able to clear', function() {
+    calculator.previousTotal = 25;
+    calculator.divide(5);
+    calculator.clearClick();
+    assert.strictEqual(calculator.runningTotal, 0);
+  })
+
 });
