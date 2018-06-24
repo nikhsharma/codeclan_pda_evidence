@@ -19,4 +19,10 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 2);
   })
 
+  it('should be able to multiply', function() {
+    calculator.previousTotal = 5;
+    calculator.multiply(5);
+    assert.strictEqual(calculator.runningTotal, 25);
+  })
+
 });
