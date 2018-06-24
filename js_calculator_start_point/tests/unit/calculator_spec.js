@@ -13,4 +13,10 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 4);
   })
 
+  it('should be able to subtract', function(){
+    calculator.previousTotal = 4;
+    calculator.subtract(2);
+    assert.strictEqual(calculator.runningTotal, 2);
+  })
+
 });
