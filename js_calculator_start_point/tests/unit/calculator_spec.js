@@ -25,4 +25,10 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 25);
   })
 
+  it('should be able to divide', function() {
+    calculator.previousTotal = 25;
+    calculator.divide(5);
+    assert.strictEqual(calculator.runningTotal, 5);
+  })
+
 });
