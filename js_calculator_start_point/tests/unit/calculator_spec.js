@@ -31,4 +31,9 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 5);
   })
 
+  it('should be able to click on a number', function() {
+    calculator.numberClick(4);
+    assert.strictEqual(calculator.runningTotal, 4);
+  })
+
 });
